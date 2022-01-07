@@ -29,6 +29,15 @@
 		3774FCB82788826B000F8AEB /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCB72788826B000F8AEB /* AuthPresenter.swift */; };
 		3774FCBB27888328000F8AEB /* ViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCBA27888328000F8AEB /* ViewPresentable.swift */; };
 		3774FCBE278885D3000F8AEB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCBD278885D3000F8AEB /* String+Extension.swift */; };
+		3774FCC227888831000F8AEB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCC127888831000F8AEB /* Network.swift */; };
+		3774FCC527888844000F8AEB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCC427888844000F8AEB /* NetworkRequest.swift */; };
+		3774FCCA27888929000F8AEB /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCC927888929000F8AEB /* NetworkResponse.swift */; };
+		3774FCCD27888B63000F8AEB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCCC27888B63000F8AEB /* Dependency.swift */; };
+		3774FCD127888BD8000F8AEB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD027888BD8000F8AEB /* AuthService.swift */; };
+		3774FCD427888C0E000F8AEB /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD327888C0E000F8AEB /* LogIn.swift */; };
+		3774FCD627888C3B000F8AEB /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD527888C3B000F8AEB /* SignUp.swift */; };
+		3774FCD827888C78000F8AEB /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD727888C78000F8AEB /* Codable+Extension.swift */; };
+		3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD927888E14000F8AEB /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +65,15 @@
 		3774FCB72788826B000F8AEB /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		3774FCBA27888328000F8AEB /* ViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentable.swift; sourceTree = "<group>"; };
 		3774FCBD278885D3000F8AEB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3774FCC127888831000F8AEB /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		3774FCC427888844000F8AEB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		3774FCC927888929000F8AEB /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		3774FCCC27888B63000F8AEB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		3774FCD027888BD8000F8AEB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3774FCD327888C0E000F8AEB /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		3774FCD527888C3B000F8AEB /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		3774FCD727888C78000F8AEB /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
+		3774FCD927888E14000F8AEB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +106,7 @@
 		3774FC6E2788236F000F8AEB /* Jat111 */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCBF27888827000F8AEB /* Core */,
 				3774FC9A27882744000F8AEB /* Extensions */,
 				3774FC89278825A7000F8AEB /* UI */,
 				3774FC87278823D1000F8AEB /* Resources */,
@@ -319,8 +338,72 @@
 			isa = PBXGroup;
 			children = (
 				3774FCBD278885D3000F8AEB /* String+Extension.swift */,
+				3774FCD727888C78000F8AEB /* Codable+Extension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		3774FCBF27888827000F8AEB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCCE27888BCE000F8AEB /* Services */,
+				3774FCCB27888B5D000F8AEB /* Dependency */,
+				3774FCC027888829000F8AEB /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3774FCC027888829000F8AEB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCC32788883D000F8AEB /* Model */,
+				3774FCC127888831000F8AEB /* Network.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3774FCC32788883D000F8AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCC427888844000F8AEB /* NetworkRequest.swift */,
+				3774FCC927888929000F8AEB /* NetworkResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3774FCCB27888B5D000F8AEB /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCCC27888B63000F8AEB /* Dependency.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		3774FCCE27888BCE000F8AEB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCCF27888BD3000F8AEB /* Auth */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3774FCCF27888BD3000F8AEB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCD227888C09000F8AEB /* Model */,
+				3774FCD027888BD8000F8AEB /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3774FCD227888C09000F8AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCD327888C0E000F8AEB /* LogIn.swift */,
+				3774FCD527888C3B000F8AEB /* SignUp.swift */,
+				3774FCD927888E14000F8AEB /* AuthResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,23 +479,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				3774FCAB27882A9D000F8AEB /* UIViewController+Extension.swift in Sources */,
+				3774FCD127888BD8000F8AEB /* AuthService.swift in Sources */,
 				3774FCA527882A43000F8AEB /* AuthFactory.swift in Sources */,
+				3774FCCA27888929000F8AEB /* NetworkResponse.swift in Sources */,
 				3774FCAE27882BD3000F8AEB /* Coordinator.swift in Sources */,
 				3774FCB227887E55000F8AEB /* AuthVCView.swift in Sources */,
 				3774FC742788236F000F8AEB /* BaseVC.swift in Sources */,
+				3774FCD427888C0E000F8AEB /* LogIn.swift in Sources */,
+				3774FCCD27888B63000F8AEB /* Dependency.swift in Sources */,
 				3774FCB527887F16000F8AEB /* Constants.swift in Sources */,
 				3774FC702788236F000F8AEB /* AppDelegate.swift in Sources */,
 				3774FC9D27882753000F8AEB /* UIView+Extension.swift in Sources */,
 				3774FCB82788826B000F8AEB /* AuthPresenter.swift in Sources */,
+				3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */,
 				3774FCA0278828DD000F8AEB /* JTTextField.swift in Sources */,
 				3774FCBE278885D3000F8AEB /* String+Extension.swift in Sources */,
 				3774FCA827882A75000F8AEB /* AuthVC.swift in Sources */,
+				3774FCC227888831000F8AEB /* Network.swift in Sources */,
 				3774FCBB27888328000F8AEB /* ViewPresentable.swift in Sources */,
+				3774FCC527888844000F8AEB /* NetworkRequest.swift in Sources */,
 				3774FC99278826A0000F8AEB /* Font.swift in Sources */,
+				3774FCD827888C78000F8AEB /* Codable+Extension.swift in Sources */,
 				3774FC722788236F000F8AEB /* SceneDelegate.swift in Sources */,
 				3774FC9627882677000F8AEB /* Color.swift in Sources */,
 				3774FCA3278829C6000F8AEB /* AuthCoordinator.swift in Sources */,
 				3774FC9327882645000F8AEB /* JTButton.swift in Sources */,
+				3774FCD627888C3B000F8AEB /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

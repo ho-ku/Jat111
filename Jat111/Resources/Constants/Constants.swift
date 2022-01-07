@@ -8,6 +8,8 @@
 import Foundation
 
 struct C {
+    static let baseURL = "https://apiecho.cf"
+    
     static let ok = "OK"
     
     static let welcome = "Welcome!"

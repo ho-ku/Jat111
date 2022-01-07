@@ -15,8 +15,8 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    func showOkAlert(error: Error) {
-        let alertController = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .alert)
+    func showOkAlert(title: String) {
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         alertController.addAction(.init(title: C.ok, style: .default, handler: nil))
         present(alertController, animated: true)
     }

@@ -58,17 +58,19 @@ extension AuthVC {
         do {
             try validateViewData()
             
-            switch state {
-            case .signUp:
-                presenter.signUp(email: viewData.email,
-                                 password: viewData.password,
-                                 name: viewData.name)
-            case .logIn:
-                presenter.logIn(email: viewData.email, password:
-                                    viewData.password)
+            Task {
+                switch state {
+                case .signUp:
+                    await presenter.signUp(email: viewData.email,
+                                     password: viewData.password,
+                                     name: viewData.name)
+                case .logIn:
+                   await presenter.logIn(email: viewData.email, password:
+                                        viewData.password)
+                }
             }
         } catch {
-            showOkAlert(error: error)
+            showOkAlert(title: error.localizedDescription)
         }
     }
 }
@@ -76,8 +78,12 @@ extension AuthVC {
 // MARK: - ViewPresentable
 
 extension AuthVC: ViewPresentable {
-    func update(with error: Error) {
-        showOkAlert(error: error)
+    func update<T>(with data: T) {
+        if let authError = data as? AuthError {
+            DispatchQueue.main.async { [weak self] in
+                self?.showOkAlert(title: authError.title)
+            }
+        }
     }
 }
 
