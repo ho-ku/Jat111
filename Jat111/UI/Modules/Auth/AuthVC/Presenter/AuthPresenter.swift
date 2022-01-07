@@ -13,12 +13,14 @@ final class AuthPresenter {
     
     weak var view: ViewPresentable?
     private let authService: AuthService
+    private let userStore: UserStore
     
     // MARK: - Init
     
     init(view: ViewPresentable) {
         self.view = view
         self.authService = Dependency.authService
+        self.userStore = Dependency.userStore
     }
 }
 
@@ -38,8 +40,8 @@ extension AuthPresenter {
     private func map(result: AuthResult) {
         switch result {
         case .success(let authResponse):
-            // save token
-            print("success")
+            userStore.update(token: authResponse.data.accessToken)
+            view?.updateWithSuccess()
         case .error(let authError):
             view?.update(with: authError)
         }

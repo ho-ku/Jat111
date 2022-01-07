@@ -38,6 +38,7 @@
 		3774FCD627888C3B000F8AEB /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD527888C3B000F8AEB /* SignUp.swift */; };
 		3774FCD827888C78000F8AEB /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD727888C78000F8AEB /* Codable+Extension.swift */; };
 		3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD927888E14000F8AEB /* AuthResponse.swift */; };
+		3774FCDD27889688000F8AEB /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCDC27889688000F8AEB /* UserStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		3774FCD527888C3B000F8AEB /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		3774FCD727888C78000F8AEB /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		3774FCD927888E14000F8AEB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		3774FCDC27889688000F8AEB /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +384,7 @@
 		3774FCCE27888BCE000F8AEB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCDB27889680000F8AEB /* User */,
 				3774FCCF27888BD3000F8AEB /* Auth */,
 			);
 			path = Services;
@@ -404,6 +407,14 @@
 				3774FCD927888E14000F8AEB /* AuthResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3774FCDB27889680000F8AEB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCDC27889688000F8AEB /* UserStore.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +511,7 @@
 				3774FCC527888844000F8AEB /* NetworkRequest.swift in Sources */,
 				3774FC99278826A0000F8AEB /* Font.swift in Sources */,
 				3774FCD827888C78000F8AEB /* Codable+Extension.swift in Sources */,
+				3774FCDD27889688000F8AEB /* UserStore.swift in Sources */,
 				3774FC722788236F000F8AEB /* SceneDelegate.swift in Sources */,
 				3774FC9627882677000F8AEB /* Color.swift in Sources */,
 				3774FCA3278829C6000F8AEB /* AuthCoordinator.swift in Sources */,

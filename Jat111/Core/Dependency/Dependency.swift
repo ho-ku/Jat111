@@ -13,4 +13,5 @@ struct Dependency {
     
     static let network: Network = .init()
     static let authService: AuthService = AuthServiceImpl()
+    static let userStore: UserStore = UserStoreImpl()
 }

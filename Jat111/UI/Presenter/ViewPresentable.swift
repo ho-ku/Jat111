@@ -9,4 +9,5 @@ import Foundation
 
 protocol ViewPresentable: AnyObject {
     func update<T>(with data: T)
+    func updateWithSuccess()
 }

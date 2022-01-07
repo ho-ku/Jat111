@@ -78,6 +78,10 @@ extension AuthVC {
 // MARK: - ViewPresentable
 
 extension AuthVC: ViewPresentable {
+    func updateWithSuccess() {
+//        updateFlow(.main)
+    }
+    
     func update<T>(with data: T) {
         if let authError = data as? AuthError {
             DispatchQueue.main.async { [weak self] in
