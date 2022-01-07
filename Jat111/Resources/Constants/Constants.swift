@@ -8,6 +8,8 @@
 import Foundation
 
 struct C {
+    static let ok = "OK"
+    
     static let welcome = "Welcome!"
     static let namePlaceholder = "Name"
     static let emailPlaceholder = "Email"

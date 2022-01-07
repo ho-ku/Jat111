@@ -9,6 +9,12 @@ import UIKit
 
 final class AuthVCView: UIView {
     
+    struct ViewData {
+        let email: String
+        let password: String
+        let name: String
+    }
+    
     // MARK: - IBOutlets
     
     @IBOutlet private weak var titleLabel: UILabel!
@@ -17,6 +23,14 @@ final class AuthVCView: UIView {
     @IBOutlet private weak var nameTextField: JTTextField!
     @IBOutlet private weak var proceedButton: JTButton!
     @IBOutlet private weak var changeStateButton: UIButton!
+    
+    // MARK: - Properties
+    
+    var viewData: ViewData {
+        .init(email: emailTextField.text ?? "",
+              password: passwordTextField.text ?? "",
+              name: nameTextField.text ?? "")
+    }
 }
 
 extension AuthVCView {

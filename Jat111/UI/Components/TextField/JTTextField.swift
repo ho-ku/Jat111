@@ -28,6 +28,7 @@ final class JTTextField: UITextField {
 
 extension JTTextField {
     private func customize() {
+        delegate = self
         addDefaultCornerRadius()
         addDefaultBorder()
         font = Font.title
@@ -43,5 +44,11 @@ extension JTTextField {
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         bounds.insetBy(dx: textInset, dy: textInset)
+    }
+}
+
+extension JTTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

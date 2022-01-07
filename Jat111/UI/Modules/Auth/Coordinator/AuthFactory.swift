@@ -18,6 +18,8 @@ protocol AuthFactory {
 final class AuthFactoryImpl: AuthFactory {
     func buildAuthVC() throws -> AuthVC {
         guard let instance = AuthVC.instance() else { throw AuthFactoryError.instanceFailure }
+        let authPresenter = AuthPresenter(view: instance)
+        instance.presenter = authPresenter
         return instance
     }
 }

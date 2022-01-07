@@ -13,3 +13,11 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: name ?? String(describing: Self.self)) as? Self
     }
 }
+
+extension UIViewController {
+    func showOkAlert(error: Error) {
+        let alertController = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .alert)
+        alertController.addAction(.init(title: C.ok, style: .default, handler: nil))
+        present(alertController, animated: true)
+    }
+}

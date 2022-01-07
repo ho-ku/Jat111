@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="AuthVC" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="AuthVC" customModule="Jat111" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="AuthVCView" customModule="Jat111" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-fu-HBQ">
-                                <rect key="frame" x="20" y="368" width="374" height="170"/>
+                                <rect key="frame" x="20" y="242" width="350" height="170"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5g9-g9-4uB" customClass="JTTextField" customModule="Jat111" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MaX-Qm-fWb"/>
                                         </constraints>
@@ -29,28 +29,28 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnD-wq-SEK" customClass="JTTextField" customModule="Jat111" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="60" width="350" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdr-eh-y1q" customClass="JTTextField" customModule="Jat111" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="120" width="350" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAY-9B-RDH">
-                                <rect key="frame" x="20" y="94" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="94" width="350" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LYR-l7-ar5">
-                                <rect key="frame" x="20" y="742" width="374" height="96"/>
+                                <rect key="frame" x="20" y="690" width="350" height="96"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esY-yA-G5o" customClass="JTButton" customModule="Jat111" customModuleProvider="target">
-                                        <rect key="frame" x="21.5" y="0.0" width="331" height="50"/>
+                                        <rect key="frame" x="19" y="0.0" width="312" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pKR-DX-XPu"/>
                                         </constraints>
@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-UD-dHW">
-                                        <rect key="frame" x="164" y="66" width="46" height="30"/>
+                                        <rect key="frame" x="152" y="66" width="46" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -77,7 +77,7 @@
                             <constraint firstItem="LYR-l7-ar5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5sU-TA-1sh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NAY-9B-RDH" secondAttribute="trailing" constant="20" id="OC1-0r-qAt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LYR-l7-ar5" secondAttribute="trailing" constant="20" id="RYW-Ii-idX"/>
-                            <constraint firstItem="UGh-fu-HBQ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="Scv-XV-DTx"/>
+                            <constraint firstItem="UGh-fu-HBQ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" constant="-100" id="Scv-XV-DTx"/>
                             <constraint firstItem="NAY-9B-RDH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="eiS-AP-0WR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LYR-l7-ar5" secondAttribute="bottom" constant="24" id="f0c-nD-GJJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UGh-fu-HBQ" secondAttribute="trailing" constant="20" id="iIk-Xx-gts"/>
@@ -105,13 +105,13 @@
     </scenes>
     <designables>
         <designable name="5g9-g9-4uB">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="24" height="39"/>
         </designable>
         <designable name="Kdr-eh-y1q">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="24" height="39"/>
         </designable>
         <designable name="bnD-wq-SEK">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="24" height="39"/>
         </designable>
         <designable name="esY-yA-G5o">
             <size key="intrinsicContentSize" width="45" height="29"/>
