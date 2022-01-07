@@ -79,7 +79,9 @@ extension AuthVC {
 
 extension AuthVC: ViewPresentable {
     func updateWithSuccess() {
-//        updateFlow(.main)
+        DispatchQueue.main.async { [weak self] in
+            self?.updateFlow(.main)
+        }
     }
     
     func update<T>(with data: T) {

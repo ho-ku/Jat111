@@ -39,6 +39,10 @@
 		3774FCD827888C78000F8AEB /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD727888C78000F8AEB /* Codable+Extension.swift */; };
 		3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCD927888E14000F8AEB /* AuthResponse.swift */; };
 		3774FCDD27889688000F8AEB /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCDC27889688000F8AEB /* UserStore.swift */; };
+		3774FCE22788980F000F8AEB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCE12788980F000F8AEB /* MainVC.swift */; };
+		3774FCE527889817000F8AEB /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774FCE427889817000F8AEB /* MainVC.storyboard */; };
+		3774FCE82788982E000F8AEB /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCE72788982E000F8AEB /* MainFactory.swift */; };
+		3774FCEA2788986D000F8AEB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCE92788986D000F8AEB /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		3774FCD727888C78000F8AEB /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		3774FCD927888E14000F8AEB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		3774FCDC27889688000F8AEB /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		3774FCE12788980F000F8AEB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		3774FCE427889817000F8AEB /* MainVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVC.storyboard; sourceTree = "<group>"; };
+		3774FCE72788982E000F8AEB /* MainFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
+		3774FCE92788986D000F8AEB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +232,7 @@
 		3774FC9027882619000F8AEB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCDE278897EB000F8AEB /* Main */,
 				3774FC8A278825AA000F8AEB /* Auth */,
 			);
 			path = Modules;
@@ -417,6 +426,49 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		3774FCDE278897EB000F8AEB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCE62788981F000F8AEB /* Coordinator */,
+				3774FCDF278897FD000F8AEB /* MainVC */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3774FCDF278897FD000F8AEB /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCE327889810000F8AEB /* Storyboard */,
+				3774FCE027889803000F8AEB /* Controller */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		3774FCE027889803000F8AEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCE12788980F000F8AEB /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3774FCE327889810000F8AEB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCE427889817000F8AEB /* MainVC.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3774FCE62788981F000F8AEB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCE72788982E000F8AEB /* MainFactory.swift */,
+				3774FCE92788986D000F8AEB /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,6 +527,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3774FCE527889817000F8AEB /* MainVC.storyboard in Resources */,
 				3774FC7C2788236F000F8AEB /* LaunchScreen.storyboard in Resources */,
 				3774FC8E278825D3000F8AEB /* AuthVC.storyboard in Resources */,
 				3774FC792788236F000F8AEB /* Assets.xcassets in Resources */,
@@ -502,11 +555,14 @@
 				3774FC702788236F000F8AEB /* AppDelegate.swift in Sources */,
 				3774FC9D27882753000F8AEB /* UIView+Extension.swift in Sources */,
 				3774FCB82788826B000F8AEB /* AuthPresenter.swift in Sources */,
+				3774FCE82788982E000F8AEB /* MainFactory.swift in Sources */,
+				3774FCE22788980F000F8AEB /* MainVC.swift in Sources */,
 				3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */,
 				3774FCA0278828DD000F8AEB /* JTTextField.swift in Sources */,
 				3774FCBE278885D3000F8AEB /* String+Extension.swift in Sources */,
 				3774FCA827882A75000F8AEB /* AuthVC.swift in Sources */,
 				3774FCC227888831000F8AEB /* Network.swift in Sources */,
+				3774FCEA2788986D000F8AEB /* MainCoordinator.swift in Sources */,
 				3774FCBB27888328000F8AEB /* ViewPresentable.swift in Sources */,
 				3774FCC527888844000F8AEB /* NetworkRequest.swift in Sources */,
 				3774FC99278826A0000F8AEB /* Font.swift in Sources */,

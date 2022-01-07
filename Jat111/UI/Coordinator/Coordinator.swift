@@ -9,4 +9,5 @@ import Foundation
 
 protocol Coordinator {
     func start(animated: Bool)
+    func stop(animated: Bool)
 }

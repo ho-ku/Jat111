@@ -14,13 +14,15 @@ private extension Notification.Name {
 
 extension UIViewController {
     enum Flow {
-        case auth
+        case auth, main
     }
     
     func updateFlow(_ flow: Flow) {
         switch flow {
         case .auth:
             NotificationCenter.default.post(name: .changeFlowAuth, object: nil)
+        case .main:
+            NotificationCenter.default.post(name: .changeFlowMain, object: nil)
         }
     }
 }
@@ -29,7 +31,9 @@ class BaseVC: UIViewController {
 
     // MARK: - Properties
     
+    private let userStore: UserStore = Dependency.userStore
     private var authCoordinator: AuthCoordinator?
+    private var mainCoordinator: MainCoordinator?
     private var flow: Flow = .auth { didSet { updateCoordinator() } }
 }
 
@@ -51,6 +55,7 @@ extension BaseVC {
 extension BaseVC {
     private func setupCoordinators() {
         authCoordinator = .init(presenter: self)
+        mainCoordinator = .init(presenter: self)
     }
 }
 
@@ -59,18 +64,25 @@ extension BaseVC {
         NotificationCenter.default.addObserver(forName: .changeFlowAuth, object: nil, queue: nil) { [weak self] _ in
             self?.flow = .auth
         }
+        NotificationCenter.default.addObserver(forName: .changeFlowMain, object: nil, queue: nil) { [weak self] _ in
+            self?.flow = .main
+        }
     }
 }
 
 extension BaseVC {
     private func updateFlow() {
-        flow = .auth
+        flow = userStore.authToken.isEmpty ? .auth : .main
     }
     
     private func updateCoordinator() {
         switch flow {
         case .auth:
+            mainCoordinator?.stop()
             authCoordinator?.start()
+        case .main:
+            authCoordinator?.stop()
+            mainCoordinator?.start()
         }
     }
 }

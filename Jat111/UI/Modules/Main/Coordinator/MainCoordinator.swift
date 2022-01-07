@@ -1,5 +1,5 @@
 //
-//  AuthCoordinator.swift
+//  MainCoordinator.swift
 //  Jat111
 //
 //  Created by Денис Андриевский on 07.01.2022.
@@ -7,31 +7,31 @@
 
 import UIKit
 
-final class AuthCoordinator {
+final class MainCoordinator {
     
     // MARK: - Properties
     
     private let presenter: UIViewController
-    private let factory: AuthFactory
-    private var authVC: AuthVC?
+    private let factory: MainFactory
+    private var mainVC: MainVC?
     
     // MARK: - Init
     
     init(presenter: UIViewController) {
         self.presenter = presenter
-        self.factory = AuthFactoryImpl()
+        self.factory = MainFactoryImpl()
     }
     
 }
 
-extension AuthCoordinator: Coordinator {
+extension MainCoordinator: Coordinator {
     func start(animated: Bool = true) {
-        authVC = try? factory.buildAuthVC()
-        guard let vc = authVC else { return }
+        mainVC = try? factory.buildMainVC()
+        guard let vc = mainVC else { return }
         presenter.present(vc, animated: animated)
     }
     
     func stop(animated: Bool = false) {
-        authVC?.dismiss(animated: animated)
+        mainVC?.dismiss(animated: animated)
     }
 }
