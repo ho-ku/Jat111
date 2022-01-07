@@ -39,7 +39,7 @@ extension AuthServiceImpl: AuthService {
     func logIn(model: LogIn) async -> AuthResult {
         guard let url = URL(string: C.baseURL + Path.login),
               let data = model.data else { return .error(AuthError(title: "URL error")) }
-        let result = await network.post(url: url, body: data, headers: [:])
+        let result = await network.post(url: url, body: data, headers: [])
         switch result {
         case .success(let networkSuccessResponse):
             guard let successResponse = networkSuccessResponse.data.decoded(into: AuthResponse.self) else {
@@ -58,7 +58,7 @@ extension AuthServiceImpl: AuthService {
     func signUp(model: SignUp) async -> AuthResult {
         guard let url = URL(string: C.baseURL + Path.signup),
               let data = model.data else { return .error(AuthError(title: "URL error")) }
-        let result = await network.post(url: url, body: data, headers: [:])
+        let result = await network.post(url: url, body: data, headers: [])
         switch result {
         case .success(let networkSuccessResponse):
             guard let successResponse = networkSuccessResponse.data.decoded(into: AuthResponse.self) else {

@@ -43,12 +43,12 @@ extension Network {
 }
 
 extension Network {
-    func get(url: URL, headers: [String: String]) async -> NetworkResponse {
+    func get(url: URL, headers: [NetworkHeader]) async -> NetworkResponse {
         let request = NetworkRequest(method: .GET, url: url, body: nil, headers: headers.map { .init(key: $0.key, value: $0.value) })
         return await execute(request: request)
     }
     
-    func post(url: URL, body: Data, headers: [String: String]) async -> NetworkResponse {
+    func post(url: URL, body: Data, headers: [NetworkHeader]) async -> NetworkResponse {
         let request = NetworkRequest(method: .POST, url: url, body: body, headers: headers.map { .init(key: $0.key, value: $0.value) })
         return await execute(request: request)
     }
@@ -60,7 +60,7 @@ private extension NetworkRequest {
         req.httpBody = body
         req.httpMethod = method.rawValue
         headers.forEach { req.addValue($0.value, forHTTPHeaderField: $0.key) }
-        req.addValue("application/json;charset=utf-8", forHTTPHeaderField: "Content-Type")
+        req.addValue(NetworkHeader.contentType.value, forHTTPHeaderField: NetworkHeader.contentType.key)
         return req
     }
 }

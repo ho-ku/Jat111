@@ -18,8 +18,8 @@ protocol MainFactory {
 final class MainFactoryImpl: MainFactory {
     func buildMainVC() throws -> MainVC {
         guard let instance = MainVC.instance() else { throw MainFactoryError.instanceFailure }
-//        let authPresenter = AuthPresenter(view: instance)
-//        instance.presenter = authPresenter
+        let mainPresenter = MainPresenter(view: instance)
+        instance.presenter = mainPresenter
         return instance
     }
 }

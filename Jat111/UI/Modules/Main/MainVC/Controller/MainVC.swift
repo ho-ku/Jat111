@@ -7,23 +7,23 @@
 
 import UIKit
 
-class MainVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+final class MainVC: UIViewController {
     
+    // MARK: - Properties
+    
+    var presenter: MainPresenter!
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MainVC: ViewPresentable {
+    func updateWithSuccess() {}
+    
+    func update<T>(with data: T) {
+        if let textError = data as? TextError {
+            DispatchQueue.main.async { [weak self] in
+                self?.showOkAlert(title: textError.title)
+            }
+        } else if let text = data as? String {
+            // proceed text
+        }
     }
-    */
-
 }

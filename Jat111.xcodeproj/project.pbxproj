@@ -43,6 +43,10 @@
 		3774FCE527889817000F8AEB /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774FCE427889817000F8AEB /* MainVC.storyboard */; };
 		3774FCE82788982E000F8AEB /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCE72788982E000F8AEB /* MainFactory.swift */; };
 		3774FCEA2788986D000F8AEB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCE92788986D000F8AEB /* MainCoordinator.swift */; };
+		3774FCED27889CA5000F8AEB /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCEC27889CA5000F8AEB /* TextService.swift */; };
+		3774FCF027889CE8000F8AEB /* TextResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCEF27889CE8000F8AEB /* TextResponse.swift */; };
+		3774FCF227889E38000F8AEB /* NetworkHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCF127889E38000F8AEB /* NetworkHeader.swift */; };
+		3774FCF527889F74000F8AEB /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCF427889F74000F8AEB /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		3774FCE427889817000F8AEB /* MainVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVC.storyboard; sourceTree = "<group>"; };
 		3774FCE72788982E000F8AEB /* MainFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
 		3774FCE92788986D000F8AEB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		3774FCEC27889CA5000F8AEB /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
+		3774FCEF27889CE8000F8AEB /* TextResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextResponse.swift; sourceTree = "<group>"; };
+		3774FCF127889E38000F8AEB /* NetworkHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeader.swift; sourceTree = "<group>"; };
+		3774FCF427889F74000F8AEB /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +386,7 @@
 			children = (
 				3774FCC427888844000F8AEB /* NetworkRequest.swift */,
 				3774FCC927888929000F8AEB /* NetworkResponse.swift */,
+				3774FCF127889E38000F8AEB /* NetworkHeader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +402,7 @@
 		3774FCCE27888BCE000F8AEB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCEB27889C94000F8AEB /* TextService */,
 				3774FCDB27889680000F8AEB /* User */,
 				3774FCCF27888BD3000F8AEB /* Auth */,
 			);
@@ -438,6 +448,7 @@
 		3774FCDF278897FD000F8AEB /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCF327889F6C000F8AEB /* Presenter */,
 				3774FCE327889810000F8AEB /* Storyboard */,
 				3774FCE027889803000F8AEB /* Controller */,
 			);
@@ -467,6 +478,31 @@
 				3774FCE92788986D000F8AEB /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3774FCEB27889C94000F8AEB /* TextService */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCEE27889CE1000F8AEB /* Model */,
+				3774FCEC27889CA5000F8AEB /* TextService.swift */,
+			);
+			path = TextService;
+			sourceTree = "<group>";
+		};
+		3774FCEE27889CE1000F8AEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCEF27889CE8000F8AEB /* TextResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3774FCF327889F6C000F8AEB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCF427889F74000F8AEB /* MainPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,8 +580,11 @@
 			files = (
 				3774FCAB27882A9D000F8AEB /* UIViewController+Extension.swift in Sources */,
 				3774FCD127888BD8000F8AEB /* AuthService.swift in Sources */,
+				3774FCED27889CA5000F8AEB /* TextService.swift in Sources */,
 				3774FCA527882A43000F8AEB /* AuthFactory.swift in Sources */,
 				3774FCCA27888929000F8AEB /* NetworkResponse.swift in Sources */,
+				3774FCF527889F74000F8AEB /* MainPresenter.swift in Sources */,
+				3774FCF027889CE8000F8AEB /* TextResponse.swift in Sources */,
 				3774FCAE27882BD3000F8AEB /* Coordinator.swift in Sources */,
 				3774FCB227887E55000F8AEB /* AuthVCView.swift in Sources */,
 				3774FC742788236F000F8AEB /* BaseVC.swift in Sources */,
@@ -557,6 +596,7 @@
 				3774FCB82788826B000F8AEB /* AuthPresenter.swift in Sources */,
 				3774FCE82788982E000F8AEB /* MainFactory.swift in Sources */,
 				3774FCE22788980F000F8AEB /* MainVC.swift in Sources */,
+				3774FCF227889E38000F8AEB /* NetworkHeader.swift in Sources */,
 				3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */,
 				3774FCA0278828DD000F8AEB /* JTTextField.swift in Sources */,
 				3774FCBE278885D3000F8AEB /* String+Extension.swift in Sources */,
