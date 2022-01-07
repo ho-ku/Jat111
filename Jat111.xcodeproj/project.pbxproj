@@ -13,6 +13,19 @@
 		3774FC772788236F000F8AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774FC752788236F000F8AEB /* Main.storyboard */; };
 		3774FC792788236F000F8AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3774FC782788236F000F8AEB /* Assets.xcassets */; };
 		3774FC7C2788236F000F8AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774FC7A2788236F000F8AEB /* LaunchScreen.storyboard */; };
+		3774FC8E278825D3000F8AEB /* AuthVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774FC8D278825D3000F8AEB /* AuthVC.storyboard */; };
+		3774FC9327882645000F8AEB /* JTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FC9227882645000F8AEB /* JTButton.swift */; };
+		3774FC9627882677000F8AEB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FC9527882677000F8AEB /* Color.swift */; };
+		3774FC99278826A0000F8AEB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FC98278826A0000F8AEB /* Font.swift */; };
+		3774FC9D27882753000F8AEB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FC9C27882753000F8AEB /* UIView+Extension.swift */; };
+		3774FCA0278828DD000F8AEB /* JTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FC9F278828DD000F8AEB /* JTTextField.swift */; };
+		3774FCA3278829C6000F8AEB /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCA2278829C6000F8AEB /* AuthCoordinator.swift */; };
+		3774FCA527882A43000F8AEB /* AuthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCA427882A43000F8AEB /* AuthFactory.swift */; };
+		3774FCA827882A75000F8AEB /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCA727882A75000F8AEB /* AuthVC.swift */; };
+		3774FCAB27882A9D000F8AEB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCAA27882A9D000F8AEB /* UIViewController+Extension.swift */; };
+		3774FCAE27882BD3000F8AEB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCAD27882BD3000F8AEB /* Coordinator.swift */; };
+		3774FCB227887E55000F8AEB /* AuthVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCB127887E55000F8AEB /* AuthVCView.swift */; };
+		3774FCB527887F16000F8AEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCB427887F16000F8AEB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		3774FC782788236F000F8AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3774FC7B2788236F000F8AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3774FC7D2788236F000F8AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3774FC8D278825D3000F8AEB /* AuthVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthVC.storyboard; sourceTree = "<group>"; };
+		3774FC9227882645000F8AEB /* JTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTButton.swift; sourceTree = "<group>"; };
+		3774FC9527882677000F8AEB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3774FC98278826A0000F8AEB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		3774FC9C27882753000F8AEB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3774FC9F278828DD000F8AEB /* JTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTTextField.swift; sourceTree = "<group>"; };
+		3774FCA2278829C6000F8AEB /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		3774FCA427882A43000F8AEB /* AuthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFactory.swift; sourceTree = "<group>"; };
+		3774FCA727882A75000F8AEB /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		3774FCAA27882A9D000F8AEB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3774FCAD27882BD3000F8AEB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3774FCB127887E55000F8AEB /* AuthVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVCView.swift; sourceTree = "<group>"; };
+		3774FCB427887F16000F8AEB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,8 @@
 		3774FC6E2788236F000F8AEB /* Jat111 */ = {
 			isa = PBXGroup;
 			children = (
+				3774FC9A27882744000F8AEB /* Extensions */,
+				3774FC89278825A7000F8AEB /* UI */,
 				3774FC87278823D1000F8AEB /* Resources */,
 				3774FC8327882397000F8AEB /* App */,
 			);
@@ -101,6 +129,9 @@
 		3774FC87278823D1000F8AEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCB327887F0D000F8AEB /* Constants */,
+				3774FC972788269C000F8AEB /* Font */,
+				3774FC9427882672000F8AEB /* Color */,
 				3774FC7D2788236F000F8AEB /* Info.plist */,
 				3774FC782788236F000F8AEB /* Assets.xcassets */,
 			);
@@ -113,6 +144,150 @@
 				3774FC7A2788236F000F8AEB /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3774FC89278825A7000F8AEB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCAC27882BC8000F8AEB /* Coordinator */,
+				3774FC9027882619000F8AEB /* Modules */,
+				3774FC8F27882614000F8AEB /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3774FC8A278825AA000F8AEB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCA1278829BB000F8AEB /* Coordinator */,
+				3774FC8B278825AC000F8AEB /* AuthVC */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3774FC8B278825AC000F8AEB /* AuthVC */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCB027883171000F8AEB /* View */,
+				3774FCA627882A67000F8AEB /* Controller */,
+				3774FC8C278825B5000F8AEB /* Storyboards */,
+			);
+			path = AuthVC;
+			sourceTree = "<group>";
+		};
+		3774FC8C278825B5000F8AEB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC8D278825D3000F8AEB /* AuthVC.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3774FC8F27882614000F8AEB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC9E278828C8000F8AEB /* TextField */,
+				3774FC9127882636000F8AEB /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3774FC9027882619000F8AEB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC8A278825AA000F8AEB /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3774FC9127882636000F8AEB /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC9227882645000F8AEB /* JTButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		3774FC9427882672000F8AEB /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC9527882677000F8AEB /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		3774FC972788269C000F8AEB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC98278826A0000F8AEB /* Font.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		3774FC9A27882744000F8AEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC9B2788274B000F8AEB /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3774FC9B2788274B000F8AEB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC9C27882753000F8AEB /* UIView+Extension.swift */,
+				3774FCAA27882A9D000F8AEB /* UIViewController+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		3774FC9E278828C8000F8AEB /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				3774FC9F278828DD000F8AEB /* JTTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		3774FCA1278829BB000F8AEB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCA2278829C6000F8AEB /* AuthCoordinator.swift */,
+				3774FCA427882A43000F8AEB /* AuthFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3774FCA627882A67000F8AEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCA727882A75000F8AEB /* AuthVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3774FCAC27882BC8000F8AEB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCAD27882BD3000F8AEB /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3774FCB027883171000F8AEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCB127887E55000F8AEB /* AuthVCView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3774FCB327887F0D000F8AEB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCB427887F16000F8AEB /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3774FC7C2788236F000F8AEB /* LaunchScreen.storyboard in Resources */,
+				3774FC8E278825D3000F8AEB /* AuthVC.storyboard in Resources */,
 				3774FC792788236F000F8AEB /* Assets.xcassets in Resources */,
 				3774FC772788236F000F8AEB /* Main.storyboard in Resources */,
 			);
@@ -186,9 +362,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3774FCAB27882A9D000F8AEB /* UIViewController+Extension.swift in Sources */,
+				3774FCA527882A43000F8AEB /* AuthFactory.swift in Sources */,
+				3774FCAE27882BD3000F8AEB /* Coordinator.swift in Sources */,
+				3774FCB227887E55000F8AEB /* AuthVCView.swift in Sources */,
 				3774FC742788236F000F8AEB /* BaseVC.swift in Sources */,
+				3774FCB527887F16000F8AEB /* Constants.swift in Sources */,
 				3774FC702788236F000F8AEB /* AppDelegate.swift in Sources */,
+				3774FC9D27882753000F8AEB /* UIView+Extension.swift in Sources */,
+				3774FCA0278828DD000F8AEB /* JTTextField.swift in Sources */,
+				3774FCA827882A75000F8AEB /* AuthVC.swift in Sources */,
+				3774FC99278826A0000F8AEB /* Font.swift in Sources */,
 				3774FC722788236F000F8AEB /* SceneDelegate.swift in Sources */,
+				3774FC9627882677000F8AEB /* Color.swift in Sources */,
+				3774FCA3278829C6000F8AEB /* AuthCoordinator.swift in Sources */,
+				3774FC9327882645000F8AEB /* JTButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
