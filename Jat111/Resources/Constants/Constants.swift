@@ -18,4 +18,7 @@ struct C {
     static let passwordPlaceholder = "Password"
     static let logIn = "Log in"
     static let signUp = "Sign up"
+    
+    static let fetch = "Fetch"
+    static let occurenceTitle = "Char \"%@\" - %d times"
 }

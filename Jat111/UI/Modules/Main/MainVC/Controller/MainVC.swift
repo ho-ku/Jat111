@@ -9,10 +9,26 @@ import UIKit
 
 final class MainVC: UIViewController {
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var mainView: MainVCView!
+    
     // MARK: - Properties
     
     var presenter: MainPresenter!
 }
+
+// MARK: - IBAction
+
+extension MainVC {
+    @IBAction private func fetchText(_ sender: JTButton) {
+        Task {
+            await presenter.getText()
+        }
+    }
+}
+
+// MARK: - ViewPresentable
 
 extension MainVC: ViewPresentable {
     func updateWithSuccess() {}
