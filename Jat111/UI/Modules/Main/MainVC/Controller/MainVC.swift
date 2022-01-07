@@ -22,8 +22,8 @@ extension MainVC: ViewPresentable {
             DispatchQueue.main.async { [weak self] in
                 self?.showOkAlert(title: textError.title)
             }
-        } else if let text = data as? String {
-            // proceed text
+        } else if let occurence = data as? [MainPresenter.Occurence] {
+            // proceed occurence
         }
     }
 }

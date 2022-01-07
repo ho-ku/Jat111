@@ -9,6 +9,11 @@ import Foundation
 
 final class MainPresenter {
     
+    struct Occurence {
+        let char: String
+        let count: Int
+    }
+    
     // MARK: - Properties
     
     weak var view: ViewPresentable?
@@ -35,9 +40,17 @@ extension MainPresenter {
     private func map(result: TextResult) {
         switch result {
         case .success(let textResponse):
-            view?.update(with: textResponse.data)
+            view?.update(with: countOccurence(in: textResponse.data))
         case .error(let authError):
             view?.update(with: authError)
         }
+    }
+}
+
+extension MainPresenter {
+    private func countOccurence(in text: String) -> [Occurence] {
+        var result: [String: Int] = [:]
+        text.forEach { result[String($0)] = (result[String($0)] ?? .zero) + 1 }
+        return result.map { .init(char: $0.key, count: $0.value) }
     }
 }
