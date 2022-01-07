@@ -12,6 +12,16 @@ final class MainVCView: UIView {
     // MARK: - IBOutlets
     
     @IBOutlet private weak var fetchButton: JTButton!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    var tableViewDelegate: (UITableViewDelegate & UITableViewDataSource)? {
+        didSet {
+            tableView.delegate = tableViewDelegate
+            tableView.dataSource = tableViewDelegate
+        }
+    }
 
 }
 
@@ -21,6 +31,12 @@ extension MainVCView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
+    }
+}
+
+extension MainVCView {
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 

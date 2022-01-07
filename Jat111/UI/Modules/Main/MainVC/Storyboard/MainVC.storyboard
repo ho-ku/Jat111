@@ -28,16 +28,52 @@
                                     <action selector="fetchText:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="A4G-hg-b9a"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qGQ-Xz-5Et">
+                                <rect key="frame" x="0.0" y="44" width="414" height="720"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OccurenceTVC" id="2LZ-fX-11V" customClass="OccurenceTVC" customModule="Jat111" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="31"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2LZ-fX-11V" id="iJA-Mr-ge7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSe-6S-quw">
+                                                    <rect key="frame" x="20" y="5" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gSe-6S-quw" firstAttribute="top" secondItem="iJA-Mr-ge7" secondAttribute="top" constant="5" id="fV5-Yk-jd7"/>
+                                                <constraint firstAttribute="trailing" secondItem="gSe-6S-quw" secondAttribute="trailing" constant="20" id="fZu-es-tub"/>
+                                                <constraint firstItem="gSe-6S-quw" firstAttribute="leading" secondItem="iJA-Mr-ge7" secondAttribute="leading" constant="20" id="i26-Zh-awO"/>
+                                                <constraint firstAttribute="bottom" secondItem="gSe-6S-quw" secondAttribute="bottom" constant="5" id="ldP-Ze-bev"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="gSe-6S-quw" id="HRV-Nm-8vb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Bgf-zr-SoQ" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="93b-YZ-3Z1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Bgf-zr-SoQ" secondAttribute="bottom" constant="24" id="J5G-DA-8Zc"/>
+                            <constraint firstItem="Bgf-zr-SoQ" firstAttribute="top" secondItem="qGQ-Xz-5Et" secondAttribute="bottom" constant="24" id="gvY-ly-7Pf"/>
+                            <constraint firstItem="qGQ-Xz-5Et" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hb0-xx-CRL"/>
                             <constraint firstItem="Bgf-zr-SoQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lur-kS-kkC"/>
+                            <constraint firstItem="qGQ-Xz-5Et" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vaU-Wp-qkh"/>
+                            <constraint firstItem="qGQ-Xz-5Et" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="y5W-B3-emF"/>
                         </constraints>
                         <connections>
                             <outlet property="fetchButton" destination="Bgf-zr-SoQ" id="EoG-yH-ptp"/>
+                            <outlet property="tableView" destination="qGQ-Xz-5Et" id="5Rt-ks-m01"/>
                         </connections>
                     </view>
                     <connections>
@@ -46,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="62"/>
+            <point key="canvasLocation" x="18.840579710144929" y="61.607142857142854"/>
         </scene>
     </scenes>
     <designables>

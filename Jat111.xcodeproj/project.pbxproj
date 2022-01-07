@@ -48,6 +48,8 @@
 		3774FCF227889E38000F8AEB /* NetworkHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCF127889E38000F8AEB /* NetworkHeader.swift */; };
 		3774FCF527889F74000F8AEB /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCF427889F74000F8AEB /* MainPresenter.swift */; };
 		3774FCF82788A3C1000F8AEB /* MainVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCF72788A3C1000F8AEB /* MainVCView.swift */; };
+		3774FCFB2788A5BB000F8AEB /* OccurenceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCFA2788A5BB000F8AEB /* OccurenceTVC.swift */; };
+		3774FCFD2788A6E3000F8AEB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774FCFC2788A6E3000F8AEB /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		3774FCF127889E38000F8AEB /* NetworkHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeader.swift; sourceTree = "<group>"; };
 		3774FCF427889F74000F8AEB /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		3774FCF72788A3C1000F8AEB /* MainVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCView.swift; sourceTree = "<group>"; };
+		3774FCFA2788A5BB000F8AEB /* OccurenceTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurenceTVC.swift; sourceTree = "<group>"; };
+		3774FCFC2788A6E3000F8AEB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,7 @@
 			children = (
 				3774FC9C27882753000F8AEB /* UIView+Extension.swift */,
 				3774FCAA27882A9D000F8AEB /* UIViewController+Extension.swift */,
+				3774FCFC2788A6E3000F8AEB /* UITableView+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -511,9 +516,18 @@
 		3774FCF62788A3B2000F8AEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3774FCF92788A5A4000F8AEB /* OccurenceTVC */,
 				3774FCF72788A3C1000F8AEB /* MainVCView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3774FCF92788A5A4000F8AEB /* OccurenceTVC */ = {
+			isa = PBXGroup;
+			children = (
+				3774FCFA2788A5BB000F8AEB /* OccurenceTVC.swift */,
+			);
+			path = OccurenceTVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,8 +624,10 @@
 				3774FCE22788980F000F8AEB /* MainVC.swift in Sources */,
 				3774FCF227889E38000F8AEB /* NetworkHeader.swift in Sources */,
 				3774FCDA27888E14000F8AEB /* AuthResponse.swift in Sources */,
+				3774FCFD2788A6E3000F8AEB /* UITableView+Extension.swift in Sources */,
 				3774FCA0278828DD000F8AEB /* JTTextField.swift in Sources */,
 				3774FCBE278885D3000F8AEB /* String+Extension.swift in Sources */,
+				3774FCFB2788A5BB000F8AEB /* OccurenceTVC.swift in Sources */,
 				3774FCA827882A75000F8AEB /* AuthVC.swift in Sources */,
 				3774FCC227888831000F8AEB /* Network.swift in Sources */,
 				3774FCEA2788986D000F8AEB /* MainCoordinator.swift in Sources */,

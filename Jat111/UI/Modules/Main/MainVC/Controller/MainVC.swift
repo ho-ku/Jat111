@@ -15,7 +15,37 @@ final class MainVC: UIViewController {
     
     // MARK: - Properties
     
+    private var occurences: [MainPresenter.Occurence] = []
     var presenter: MainPresenter!
+}
+
+// MARK: - Lifecycle
+
+extension MainVC {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mainView.tableViewDelegate = self
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension MainVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 40 }
+}
+
+// MARK: - UITableViewDataSource
+
+extension MainVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        occurences.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withClass: OccurenceTVC.self)
+        cell.update(occurence: occurences[indexPath.row])
+        return cell
+    }
 }
 
 // MARK: - IBAction
@@ -34,12 +64,13 @@ extension MainVC: ViewPresentable {
     func updateWithSuccess() {}
     
     func update<T>(with data: T) {
-        if let textError = data as? TextError {
-            DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.async { [weak self] in
+            if let textError = data as? TextError {
                 self?.showOkAlert(title: textError.title)
+            } else if let occurence = data as? [MainPresenter.Occurence] {
+                self?.occurences = occurence
+                self?.mainView.reloadData()
             }
-        } else if let occurence = data as? [MainPresenter.Occurence] {
-            // proceed occurence
         }
     }
 }
